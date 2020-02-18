@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tasks Prediction</title>
+
+      <meta charset="UTF-8">
+      <title>ML API</title>
+      <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+  </head>
+  <body>
+
+      <p>  <h1>The Task you gave is</h1></p>
+      {{task}}
+
+  <p>  <h2>The Possible Tasks are</h1></p>
+<table>
+  <tr>
+    <th>Tasks</th>
+    <th>Probablity</th>
+  </tr>
+
+
+{% for i in range(0,11,2)%}
+<tr>
+  <td>{{a[i]}}</td>
+  <td>{{a[i+1]}}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+  </body>
+</html>
