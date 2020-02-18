@@ -16,25 +16,10 @@
   </head>
   <body>
 
-      <p>  <h1>The Task you gave is</h1></p>
-      {{task}}
 
-  <p>  <h2>The Possible Tasks are</h1></p>
-<table>
-  <tr>
-    <th>Tasks</th>
-    <th>Probablity</th>
-  </tr>
+  <p>  <h1>The Possible Tasks are</h1></p>
 
-
-{% for i in range(0,11,2)%}
-<tr>
-  <td>{{a[i]}}</td>
-  <td>{{a[i+1]}}</td>
-</tr>
-
-{% endfor %}
-
-</table>
+  {{a}}
+  
   </body>
 </html>

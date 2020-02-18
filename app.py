@@ -1,7 +1,7 @@
 import pandas as pd
 from flask import Flask, request, jsonify, render_template, session,redirect,url_for,request
-from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField
+#from flask_wtf import FlaskForm
+#from wtforms import StringField, SubmitField
 import pickle
 
 app= Flask(__name__)
