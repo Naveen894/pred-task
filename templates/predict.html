@@ -15,15 +15,28 @@
 
   </head>
   <body>
-  <p>  <h1>Task you gave is</h1></p>
-  <p>{{form}}</p>
+  <p>  <h1>The Task You Selected Is</h1></p>
+<h3>{{task}}</h3>
 
-  <p>  <h1>The Possible Tasks are</h1></p>
-<p>
+  <p>  <h2>The Possible Tasks are</h2></p>
 
-  {%for elem in a%}
-  <li>{{elem}}</li>
-  {%endfor%}
-</p>
+<table style="width:80%">
+
+
+<tr>
+<th>Tasks</th>
+<th>Probablity</th>
+<tbody>
+{%for i in range(0,11,2)%}
+<tr>
+
+<td>{{a[i]}}</td>
+
+<td>{{a[i+1]}}</td>
+{%endfor%}
+</tr>
+  </tbody>
+</table>
+</ol>
   </body>
 </html>

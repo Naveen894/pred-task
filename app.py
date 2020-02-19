@@ -14,14 +14,8 @@ def home():
 
 def similar_products(task, n = 6):
         ms = model.similar_by_vector(task, topn= n+1)[1:]
-        #print(ms)
-        new_ms = []
-        for j in ms:
-            #pair = (products_dict[j[0]][0], j[1])
-            new_ms.append(ms)
-            #print(pair)
-            #print(new_ms)
-            return new_ms
+        ms = [ms for t in ms for ms in t]
+        return ms
 
 #a=similar_products('Automatic Order CPE')
 @app.route('/predict1')
